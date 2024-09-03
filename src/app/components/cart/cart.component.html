@@ -1,0 +1,20 @@
+
+     
+
+    <div class="row d-flex mt-3 justify-content-between align-items-center w-100 cart"*ngFor="let item of items$ | async">
+  <div class="col-4">
+    <img [src]="item.imageLink" alt="Product Image" class="w-100">
+
+  </div>
+  <div class="col-4">
+    <p class="fw-bold"> {{ item.productName }}</p>
+    <p>Item Code: {{item.productID}}</p>
+
+  </div>
+  <div class="col-4">
+    <i class="fa-solid fa-trash fs-5 icon" (click)="removeFromCart(item)"></i>
+
+  </div>
+    </div>
+
+    
